@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+* {
+    font-family: "SUSE", sans-serif;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f5f0 !important;
+}
+
+@keyframes scale-controller {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes opacity-controller {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.sidebar {
+    height: 100vh;
+    width: 300px;
+    background-color: var(--bs-dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    color: white;
+    overflow: auto;
+}
+
+.sidebar-items {
+    margin-right: 50px;
+}
+
+.sidebar a {
+    display: block;
+    color: #bbb;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 0 15px 15px 0;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+
+.sidebar .selected {
+    background-color: white;
+    color: black;
+    border-left: 5px solid var(--bs-success);
+}
+
+.sidebar a:not(.selected):hover {
+    color: #fff;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+}
+
+.sidebar .selected i {
+    color: var(--bs-success);
+}
+
+.sidebar button {
+    position: relative !important;
+    top: 40% !important;
+    left: 36px !important;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 21px;
+    width: 66%;
+}
+
+.sidebar button:hover {
+    color: #bbb;
+}
+
+/* Overview Content */
+.overview {
+    margin-left: 300px;
+    padding: 50px;
+}
+
+/* Try to fix the problem of the first child container */
+
+
+.section-heading {
+    display: flex;
+    padding: 15px;
+}
+
+.section-heading a {
+    text-decoration: none;
+}
+
+.section-heading a i {
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+.overview .numbers {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.overview .numbers .card {
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    animation: opacity-controller 1.5s both;
+}
+
+.overview .numbers .card .card-text {
+    font-size: 30px;
+}
+
+.overview .numbers .main-card {
+    background-color: var(--bs-dark);
+    color: #fff;
+}
+
+.overview .numbers .main-card .card-subtitle {
+    color: #aaa;
+}
+
+.overview .other-side .pots {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.overview .other-side .pots .section-heading {
+    gap: 64%;
+}
+
+/* Inside the pots itself */
+.pots-content {
+    margin-left: 20px !important;
+    animation: scale-controller 0.5s both;
+}
+
+.pots-content .row .col-md:first-child { /* Total Number */
+    display: flex;
+    gap: 10px !important;
+    background-color: #f8f5f0;
+    border-radius: 20px;
+    padding: 20px;
+    height: 135px;
+}
+
+.pots-content .row .col-md:first-child div {
+    display: grid;
+    font-size: 14px;
+}
+
+.pots-content .row .col-md:first-child div span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.pots-content .row .col-md:first-child i {
+    font-size: 35px;
+    color: var(--bs-success);
+    font-weight: bold;
+    margin-right: 20px;
+    margin-top: 33px;
+}
+
+.pots-content .row .col-md:nth-child(2) ul, .pots-content .row .col-md:last-child ul, .budjets .container .row .col-md:last-child ul {
+    list-style: none;
+    display: grid;
+    gap: 25px;
+}
+
+.pots-content .row .col-md:nth-child(2) ul li, .pots-content .row .col-md:last-child ul li, .budjets .container .row .col-md:last-child ul li {
+    font-size: 13px;
+}
+
+.pots-content .row .col-md:nth-child(2) ul li::before, .pots-content .row .col-md:last-child ul li::before, .budjets .container .row .col-md:last-child ul li::before {
+    content: '';
+    width: 3px;
+    height: 50px;
+    display: inline-grid;
+    margin-left: -13px;
+    margin-right: 20px;
+    position: absolute;
+}
+
+.pots-content .row .col-md:nth-child(2) ul li:first-child:before {
+    background-color: var(--bs-success);
+}
+
+.pots-content .row .col-md:nth-child(2) ul li:last-child:before {
+    background-color: #62606d;
+}
+
+.pots-content .row .col-md:last-child ul li:first-child:before {
+    background-color: var(--bs-info);
+}
+
+.pots-content .row .col-md:last-child ul li:last-child:before {
+    background-color: #f0cdab;
+}
+
+/* Transactions */
+.transactions {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.transactions .section-heading {
+    gap: 44%;
+}
+
+.transactions .items {
+    animation: scale-controller 0.5s both;
+}
+
+.transactions .items .item {
+    padding: 20px;
+    display: flex;
+}
+
+.transactions .items .item:first-child, .transactions .items .item:nth-child(2) {
+    gap: 37%;
+}
+
+.transactions .items .item:nth-child(3) {
+    gap: 46%;
+}
+
+.transactions .items .item:nth-child(4) {
+    gap: 51%;
+}
+
+.transactions .items .item:last-child {
+    gap: 35%;
+}
+
+.transactions .items .item:not(:last-child) {
+    border-bottom: 1px solid  rgba(128, 128, 128, 0.1);
+}
+
+.transactions .items .item img {
+    height: 50px;
+}
+
+.transactions .items .item div:first-child {
+    display: flex;
+    gap: 15px;
+}
+
+.transactions .items .item div:last-child {
+    display: grid;
+    gap: 5px;
+}
+
+/* Budjets */
+.budjets {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.budjets .section-heading {
+    gap: 50%;
+}
+
+.budjets .container .row {
+    animation: scale-controller 0.5s both;
+}
+
+.budjets .container .row .col-md .pie-chart {
+    --size: 150px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: conic-gradient(
+      var(--bs-success) 0% 13%,  /* Red */
+      #f0cdab 13% 24%, /* Blue */
+      #62606d 24% 40%, /* Yellow */
+      var(--bs-info) 40% 100% /* Green */
+    );    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: scale(1.54);
+    margin-top: 63px;
+    margin-left: 32px;
+}
+
+.budjets .container .row .col-md .pie-chart::before {
+    content: attr(data-label);
+    position: absolute;
+    font-size: 29px;
+    color: #333;
+    background-color: #f8f5f0;
+    border-radius: 50%;
+    width: 83px;
+    height: 83px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 21px;
+    outline: 10px solid rgba(255, 255, 255, 0.4);
+}
+
+.budjets .container .row .col-md:last-child ul li:first-child:before {
+    background-color: var(--bs-success);
+}
+
+.budjets .container .row .col-md:last-child ul li:nth-child(2):before {
+    background-color: var(--bs-info);
+}
+
+.budjets .container .row .col-md:last-child ul li:nth-child(3):before {
+    background-color: #62606d;
+}
+
+.budjets .container .row .col-md:last-child ul li:last-child:before {
+    background-color: #f0cdab;
+}
+
+/* Recurring Bills */
+.recurring-bills {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.recurring-bills .section-heading {
+    gap: 35%;
+}
+
+.recurring-bills .bills {
+    animation: scale-controller 0.5s both;
+}
+
+.recurring-bills .bills .bill {
+    background-color: #f8f5f0;
+    border-radius: 7px;
+    border-left: 3px solid;
+    padding: 20px;
+    display: flex;
+    z-index: 2;
+    position: relative;
+}
+
+.recurring-bills .bills .bill:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.recurring-bills .bills .bill:first-child {
+    border-color: var(--bs-success);
+}
+
+.recurring-bills .bills .bill:nth-child(2) {
+    border-color: #f0cdab;
+}
+
+.recurring-bills .bills .bill:last-child {
+    border-color: var(--bs-info);
+}
+
+.recurring-bills .bills [data-gap="70%"] {
+    gap: 70%;
+}
+
+.recurring-bills .bills [data-gap="59%"] {
+    gap: 59%;
+}
+
+.recurring-bills .bills .bill::after {
+    content: '';
+    width: 463px;
+    height: 0px;
+    position: absolute;
+    margin-top: -21px;
+    margin-left: -23px;
+    z-index: -1;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.recurring-bills .bills .bill:hover {
+    color: #fff !important;
+}
+
+.recurring-bills .bills .bill:hover::after {
+    height: 65px;
+}
+
+.recurring-bills .bills .bill:first-child:after {
+    background-color: var(--bs-success);
+}
+
+.recurring-bills .bills .bill:nth-child(2):after {
+    background-color: #f0cdab;
+}
+
+.recurring-bills .bills .bill:last-child:after {
+    background-color: var(--bs-info);
+}

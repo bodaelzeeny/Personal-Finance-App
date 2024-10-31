@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Finance app</title>
+        <link rel="stylesheet" href="style/master.css">
+        <link rel="stylesheet" href="style/bootstrap.min.css">
+        <script src="script/jquery.min.js"></script>
+    </head>
+    <body>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-items">
+                <!-- Heading -->
+                <h1 class="display-5 fw-bold mb-5 text-center">finance</h1>
+                <!-- Items -->
+                <a href="#" class="selected"><i class="fa-solid fa-house"></i> Overview</a>
+                <a href="#"><i class="fa-solid fa-arrow-down-up-across-line"></i> Transactions</a>
+                <a href="#"><i class="fa-solid fa-chart-pie"></i> Budjets</a>
+                <a href="#"><i class="fa-solid fa-sack-dollar"></i> Pots</a>
+                <a href="#"><i class="fa-solid fa-receipt"></i> Recurring Bills</a>
+                <!-- Minimize to menu -->
+            </div>
+        </div>
+        <!-- Overview Content -->
+        <div class="overview">
+            <h1 class="display-4 fw-bold">Overview</h1>
+            <!-- Final Numbers Section -->
+            <div class="container numbers">
+                <div class="row">
+                    <div class="col-md">
+                        <div class="card main-card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2">Current Balance</h6>
+                                <p class="card-text">$4,836.00</p>
+                            </div>
+                        </div>            
+                    </div>
+                    <div class="col-md">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2">Income</h6>
+                                <p class="card-text">$3,814.00</p>
+                            </div>
+                        </div>            
+                    </div>
+                    <div class="col-md">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2">Expenses</h6>
+                                <p class="card-text">$1,700.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Details Section -->
+            <div class="container other-side">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Left Side -->
+                        <div class="pots">
+                            <!-- Heading of pots -->
+                            <div class="section-heading">
+                                <div class="fw-bold fs-3">Pots</div>
+                                <a href="#" class="btn-link">See Details <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                            <!-- Content of pots -->
+                            <div class="container pots-content">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <i class="fa-solid fa-sack-dollar"></i>
+                                        <div>
+                                            Total Saved
+                                            <span>$850</span>    
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <ul>
+                                            <li>
+                                                Savings <br>
+                                                <strong style="font-size: 20px;">$159</strong>
+                                            </li>
+                                            <li>
+                                                Concert Ticket <br>
+                                                <strong style="font-size: 20px;">$110</strong>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md">
+                                        <ul>
+                                            <li>
+                                                Gifts <br>
+                                                <strong style="font-size: 20px;">$159</strong>
+                                            </li>
+                                            <li>
+                                                New Laptop <br>
+                                                <strong style="font-size: 20px;">$110</strong>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Transactions -->
+                        <div class="transactions">
+                            <div class="section-heading">
+                                <div class="fw-bold fs-3">Transactions</div>
+                                <a href="#" class="btn-link">View All <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                            <!-- Content of Transactions -->
+                            <div class="items">
+                                <div class="item">
+                                    <div>
+                                        <img src="img/user.png">
+                                        Emma Richardson    
+                                    </div>
+                                    <div>
+                                        <strong class="text-success">+$75.50</strong>
+                                        19 Aug 
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div>
+                                        <img src="img/service.png">
+                                        Savory Bites Bistro    
+                                    </div>
+                                    <div>
+                                        <strong class="text-danger">-$55.50</strong>
+                                        19 Aug 
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div>
+                                        <img src="img/user.png">
+                                        Daniel Carter    
+                                    </div>
+                                    <div>
+                                        <strong class="text-danger">-$42.30</strong>
+                                        18 Aug 
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div>
+                                        <img src="img/user.png">
+                                        Sun Park    
+                                    </div>
+                                    <div>
+                                        <strong class="text-success">+$120.00</strong>
+                                        17 Aug 
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div>
+                                        <img src="img/service.png">
+                                        Urban Services Hub    
+                                    </div>
+                                    <div>
+                                        <strong class="text-danger">-$65.00</strong>
+                                        17 Aug 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right part of the other side -->
+                    <div class="col-md-6">
+                        <!-- Budjets -->
+                        <div class="budjets">
+                            <div class="section-heading">
+                                <div class="fw-bold fs-3">Budjets</div>
+                                <a href="#" class="btn-link">See Details <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                            <!-- Content of Budjets -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="pie-chart" data-label="$338"></div>
+                                    </div>
+                                    <div class="col-md">
+                                        <ul>
+                                            <li>
+                                                Entertainment
+                                                <br>
+                                                <strong style="font-size: 20px;">$50.00</strong>
+                                            </li>
+                                            <li>
+                                                Bills
+                                                <br>
+                                                <strong style="font-size: 20px;">$750.00</strong>
+                                            </li>
+                                            <li>
+                                                Personal Care
+                                                <br>
+                                                <strong style="font-size: 20px;">$100.00</strong>
+                                            </li>
+                                            <li>
+                                                Dining Out
+                                                <br>
+                                                <strong style="font-size: 20px;">$75.00</strong>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Recurring Bills -->
+                        <div class="recurring-bills">
+                            <div class="section-heading">
+                                <div class="fw-bold fs-3">Recurring Bills</div>
+                                <a href="#" class="btn-link">See Details <i class="fa-solid fa-chevron-right"></i></a>
+                            </div>
+                            <!-- Content of Bills -->
+                            <div class="bills">
+                                <div class="bill" data-gap="70%">
+                                    <span>Paid Bills</span>
+                                    <strong>$190.00</strong>
+                                </div>
+                                <div class="bill" data-gap="59%">
+                                    <span>Total Upcoming</span>
+                                    <strong>$194.98</strong>
+                                </div>
+                                <div class="bill" data-gap="70%">
+                                    <span>Due Soon</span>
+                                    <strong>$59.98</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="pie-chart" data-label="75%"></div> -->
+            </div>
+        </div>
+        <script src="script/main.js"></script>
+        <script src="script/bootstrap.bundle.min.js"></script>
+        <script src="script/fontawesome.kit.js"></script>
+    </body>
+</html>
